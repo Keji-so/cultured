@@ -1,4 +1,5 @@
 import styles from '../styles/Home.module.scss';
+import Image from 'next/image';
 
 
 function Nav() {
@@ -8,7 +9,7 @@ function Nav() {
             <div className={styles.left}>
                 <div className={styles.left_cont}>
                     <div className={styles.logo}>
-                        <img src="images/logo.png" alt="logo image" />
+                        <Image src="/images/logo.png" alt="logo image" width={30} height={20} />
                     </div>
                     <div className={styles.logo_text}>
                         cultured.
@@ -22,10 +23,10 @@ function Nav() {
                 <div className={styles.option}>SCULPTURE</div>
                 <div className={styles.option}>ARTISTS</div>
                 <div className={styles.icon}>
-                    <img src="images/search.png" alt="search image" />
+                    <Image src="/images/search.png" alt="search image"  width={20} height={20} />
                 </div>
                 <div className={styles.icon}>
-                    <img src="images/cart.png" alt="search cart" />
+                    <Image src="/images/cart.png" alt="search cart" width={20} height={20} />
                 </div>
             </div>
 
