@@ -44,7 +44,7 @@ export default function Home() {
             <div className={styles.cont}>
               {Data.map(data => {
               return ( 
-              <div className={styles.sale_cont}>
+              <div className={styles.sale_cont} key={data.id}>
                   <div className={styles.image}>
                       <Image src={data.image} alt="image" width={80} height={80} />
                   </div>
