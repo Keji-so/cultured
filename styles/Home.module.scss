@@ -7,7 +7,7 @@
   display: flex;
   font-family: 'Karla', sans-serif;
 
-  margin: 0 50px;
+  margin: 0 100px;
 
 
   .left {
@@ -49,7 +49,7 @@
 .featured {
   display: flex;
   font-family: 'Optima LT Std';
-  margin: 50px;
+  margin: 50px 100px;
   justify-content: space-between;
   align-items: center;
 
@@ -60,5 +60,88 @@
 
   .icon {
     cursor: pointer;
+  }
+}
+
+.image_slide {
+   display: flex;
+    align-items: center;
+    
+
+
+
+.card_cont {
+    display: flex;
+    overflow: auto;
+    align-items: center;
+    padding: 50px 30px;
+
+
+    
+    &::-webkit-scrollbar {
+      display: none;
+  }
+
+
+  .card {
+    font-family: 'Optima LT Std';
+    flex: 0 0 auto;
+    padding: 30px;
+    margin: 0 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+ 
+  
+
+    .image_active {
+       box-shadow: 0px 0px 9px 4px rgba(22,20,18,0.2);
+       transition: all 0.3s ease;
+       width: 232px;
+       height: 264px;
+       overflow: hidden;
+}
+
+     .image_actives {
+       box-shadow: 0px 0px 9px 4px rgba(22,20,18,0.2);
+       transition: all 0.3s ease;
+       width: 232px;
+       height: 216px;
+       overflow: hidden;
+     }
+
+    .content {
+
+     margin: 15px 0;
+
+     .title {
+       font-weight: 600;
+     }
+
+     .owner {
+       color: #65635F;
+       margin: 6px 0;
+       font-weight: 600;
+       font-size: 15px;
+
+     }
+
+     .type {
+      color: #65635F;
+     }
+    }
+
+   
+ }
+}
+
+  .card_active {
+    box-shadow: 0px 0px 9px 4px rgba(22,20,18,0.2);
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1);
+      transition: all 0.3s ease;
+    }
   }
 }

@@ -2,7 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
+  // overflow-x: hidden;
  
 }
 
@@ -14,8 +14,8 @@
 html {
   scroll-behavior: smooth;
   font-family: sans-serif;
-  padding: 50px;
-
+  padding: 50px 0;
+  color: #161412;
 
 a {
   text-decoration: none;
