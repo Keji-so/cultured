@@ -46,6 +46,7 @@
   }
 }
 
+
 .featured {
   display: flex;
   font-family: 'Optima LT Std';
@@ -63,85 +64,190 @@
   }
 }
 
-.image_slide {
-   display: flex;
-    align-items: center;
-    
+.slide {
 
-
-
-.card_cont {
+  .image_slide {
     display: flex;
-    overflow: auto;
-    align-items: center;
-    padding: 50px 30px;
-
-
-    
-    &::-webkit-scrollbar {
-      display: none;
-  }
-
-
-  .card {
-    font-family: 'Optima LT Std';
-    flex: 0 0 auto;
-    padding: 30px;
-    margin: 0 30px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-
+     align-items: center;
+     
+ 
+ 
+ 
+ .card_cont {
+     display: flex;
+     overflow: auto;
+     align-items: center;
+     padding: 30px;
+ 
+ 
+     
+     &::-webkit-scrollbar {
+       display: none;
+   }
+ 
+ 
+   .card {
+     font-family: 'Optima LT Std';
+     flex: 0 0 auto;
+     padding: 30px;
+     margin: 0 30px;
+     transition: all 0.3s ease;
+     background: #fff;
  
   
-
-    .image_active {
-       box-shadow: 0px 0px 9px 4px rgba(22,20,18,0.2);
-       transition: all 0.3s ease;
-       width: 232px;
-       height: 264px;
-       overflow: hidden;
-}
-
-     .image_actives {
-       box-shadow: 0px 0px 9px 4px rgba(22,20,18,0.2);
-       transition: all 0.3s ease;
-       width: 232px;
-       height: 216px;
-       overflow: hidden;
-     }
-
-    .content {
-
-     margin: 15px 0;
-
-     .title {
-       font-weight: 600;
-     }
-
-     .owner {
+   .image {
+     cursor: pointer;
+   }
+ 
+     .image_active {
+        box-shadow: 0px 0px 9px 4px rgba(22,20,18,0.2);
+        transition: all 0.3s ease;
+        width: 232px;
+        height: 264px;
+        overflow: hidden;
+ }
+ 
+      .image_actives {
+        box-shadow: 0px 0px 9px 4px rgba(22,20,18,0.2);
+        transition: all 0.3s ease;
+        width: 232px;
+        height: 216px;
+        overflow: hidden;
+      }
+ 
+     .content {
+ 
+      margin: 15px 0;
+ 
+      .title {
+        font-weight: 600;
+      }
+ 
+      .owner {
+        color: #65635F;
+        margin: 6px 0;
+        font-weight: 600;
+        font-size: 15px;
+ 
+      }
+ 
+      .type {
        color: #65635F;
-       margin: 6px 0;
-       font-weight: 600;
-       font-size: 15px;
-
+      }
      }
-
-     .type {
-      color: #65635F;
+ 
+    
+  }
+ }
+ 
+   .card_active {
+     box-shadow: 0px 0px 9px 4px rgba(22,20,18,0.2);
+     transition: all 0.3s ease;
+ 
+     &:hover {
+       transform: scale(1.1);
+       transition: all 0.3s ease;
      }
-    }
+   }
+ 
+   .bottom {
+      display: flex;
+      margin-top: 50px;
+      align-items: center;
+      visibility: hidden;
+      opacity: 0;
+      transition: all 0.2s ease-in-out;
+ 
+      .left {
+        width: 50%;
+        display: flex;
+        font-family: 'Karla', sans-serif;
+        font-weight: 600;
 
-   
+        .amount {
+          margin-left: 4px;
+        }
+ 
+      }
+ 
+      .icons {
+       width: 50%;
+       display: flex;
+       justify-content: flex-end;
+ 
+       .share {
+         padding: 5px 6px;
+         background: #E7E7E1;
+         cursor: pointer;
+         display: flex;
+         align-items: center;
+       }
+ 
+       .cart {
+         padding: 5px 6px;
+         background: #161412;
+         cursor: pointer;
+         display: flex;
+         align-items: center;
+         margin-left: 7px;
+       
+       }
+     }
+ 
+   }
+ 
+   .bottom_active {
+     visibility: visible;
+     opacity: 1;
+   }
  }
 }
 
-  .card_active {
-    box-shadow: 0px 0px 9px 4px rgba(22,20,18,0.2);
-    transition: all 0.3s ease;
+.footer {
+  width: 100%;
+  margin-top: -2%;
+  padding: 2% 15%;
+  background: #F4F4F2;
+  z-index: 0;
 
-    &:hover {
-      transform: scale(1.1);
-      transition: all 0.3s ease;
+  .container {
+    padding: 30px 60px;
+
+    .text {
+       font-family: 'Karla', sans-serif;
+       margin-bottom: 30px;
+       text-transform: uppercase;
+       font-weight: 500;
     }
+
+    .cont {
+      display: flex;
+      justify-content: space-between;
+
+
+      .sale_cont {
+        border: 1px solid rgba(101, 99, 95, 0.2);
+        display: flex;
+        height: 80px;
+        width: 400px;
+        margin-right: 20px;
+
+        .desc {
+          font-family: 'Optima LT Std';
+          margin: 20px;
+
+          .type {
+            color: #65635F;
+            font-size: 13px;
+            margin-top: 5px;
+          }
+        }
+      }
+    }
+    
   }
+}
+
+.slider {
+  z-index: 99;
 }

@@ -4,33 +4,12 @@ import Image from 'next/image';
 import Head from "next/head";
 import Nav from '../components/Nav'
 import Slide from '../components/Slide'
-import { Data, Datas } from '../components/data.js';
+import { Data } from '../components/data.js';
 
 
 
 export default function Home() {
 
-  const [hover, setHover] = useState(true);
-
-  const cardHover = () => {
-      setHover(false);
-  }
-
-
-  const cardLeave = () => {
-    setHover(true);
-}
-
-
-const [hovers, setHovers] = useState(true);
-
-const cardHovers = () => {
-    setHovers(false);
-}
-
-const cardLeaves = () => {
-  setHovers(true);
-}
 
 
 
@@ -54,9 +33,33 @@ const cardLeaves = () => {
         </div>
       </div>
 
-      <main>
-        <Slide />
+      <main className={styles.slider}>
+        <Slide  />
      </main>
+
+     <footer>
+       <div className={styles.footer}>
+         <div className={styles.container}>
+            <div className={styles.text}>Featured Artists</div>
+            <div className={styles.cont}>
+              {Data.map(data => {
+              return ( 
+              <div className={styles.sale_cont}>
+                  <div className={styles.image}>
+                      <Image src={data.image} alt="image" width={80} height={80} />
+                  </div>
+                  <div className={styles.desc}>
+                      <div className={styles.name}>{data.name}</div>
+                      <div className={styles.type}><i>{data.type}</i></div>
+                  </div>
+                </div>
+                )
+                })}
+            </div>
+         </div>
+       </div>
+     </footer>
+
     </div>
     </>
   )

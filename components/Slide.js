@@ -63,7 +63,7 @@ const sixthLeave = () => {
         }    
 
     return (
-        <div>
+        <div className={styles.slide}>
             <div className={styles.image_slide}>
 
                 <div className={styles.card_cont}>
@@ -77,6 +77,21 @@ const sixthLeave = () => {
                             <div className={styles.owner}>Ria Arante</div>
                             <div className={styles.type}><i>Oil on canvas, 2020</i></div>
                         </div>
+
+                        <div className={ `${styles["bottom"]} ${styles[first ? "" : "bottom_active"]}`}>
+                            <div className={styles.left}>
+                                <div className={styles.currency}>$</div>
+                                <div className={styles.amount}>620</div>
+                            </div>
+                            <div className={styles.icons}>
+                                <div className={styles.share}>
+                                    <Image src="/images/share.png" width={20} height={20} />
+                                </div>
+                                <div className={styles.cart}>
+                                    <Image src="/images/cartw.png" width={20} height={20} />
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <div className={ `${styles["card"]} ${styles[second ? "" : "card_active"]}`} onMouseEnter={secondEnter} onMouseLeave={secondLeave}>
@@ -84,9 +99,24 @@ const sixthLeave = () => {
                             <Image src="/images/pic2.png" alt="painting image" width={232} height={264}  />
                         </div>
                         <div className={styles.content}>
-                        <div className={styles.title}>Wallowing Breeze</div>
-                        <div className={styles.owner}>Hettie Richards</div>
-                        <div className={styles.type}><i>Oil on canvas, 2008</i></div>
+                                <div className={styles.title}>Wallowing Breeze</div>
+                                <div className={styles.owner}>Hettie Richards</div>
+                                <div className={styles.type}><i>Oil on canvas, 2008</i></div>
+                        </div>
+
+                        <div className={ `${styles["bottom"]} ${styles[second ? "" : "bottom_active"]}`}>
+                            <div className={styles.left}>
+                                <div className={styles.currency}>$</div>
+                                <div className={styles.amount}>620</div>
+                            </div>
+                            <div className={styles.icons}>
+                                <div className={styles.share}>
+                                    <Image src="/images/share.png" width={20} height={20} />
+                                </div>
+                                <div className={styles.cart}>
+                                    <Image src="/images/cartw.png" width={20} height={20} />
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -99,16 +129,46 @@ const sixthLeave = () => {
                             <div className={styles.owner}>Ria Arante</div>
                             <div className={styles.type}><i>Gouache on paper, 2018</i></div>
                         </div>
+
+                        <div className={ `${styles["bottom"]} ${styles[third ? "" : "bottom_active"]}`}>
+                            <div className={styles.left}>
+                                <div className={styles.currency}>$</div>
+                                <div className={styles.amount}>620</div>
+                            </div>
+                            <div className={styles.icons}>
+                                <div className={styles.share}>
+                                    <Image src="/images/share.png" width={20} height={20} />
+                                </div>
+                                <div className={styles.cart}>
+                                    <Image src="/images/cartw.png" width={20} height={20} />
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <div className={ `${styles["card"]} ${styles[fourth ? "" : "card_active"]}`} onMouseEnter={fourthEnter} onMouseLeave={fourthLeave}>
+                    <div className={ `${styles["card"]} ${styles[fourth? "" : "card_active"]}`} onMouseEnter={fourthEnter} onMouseLeave={fourthLeave}>
                         <div className={ `${styles["image"]} ${styles[fourth ? "" : "image_active"]}`}>
                             <Image src="/images/pic4.png" alt="painting image" width={232} height={264}  />
                         </div>
                         <div className={styles.content}>
-                        <div className={styles.title}>Warm Basket</div>
-                        <div className={styles.owner}>Flora Powers</div>
-                        <div className={styles.type}><i>Acrylic on wood, 2014</i></div>
+                                <div className={styles.title}>Warm Basket</div>
+                                <div className={styles.owner}>Flora Powers</div>
+                                <div className={styles.type}><i>Acrylic on wood, 2014</i></div>
+                        </div>
+
+                        <div className={ `${styles["bottom"]} ${styles[fourth ? "" : "bottom_active"]}`}>
+                            <div className={styles.left}>
+                                <div className={styles.currency}>$</div>
+                                <div className={styles.amount}>620</div>
+                            </div>
+                            <div className={styles.icons}>
+                                <div className={styles.share}>
+                                    <Image src="/images/share.png" width={20} height={20} />
+                                </div>
+                                <div className={styles.cart}>
+                                    <Image src="/images/cartw.png" width={20} height={20} />
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -121,6 +181,21 @@ const sixthLeave = () => {
                             <div className={styles.owner}>Ria Arante</div>
                             <div className={styles.type}><i>Oil on canvas, 2020</i></div>
                         </div>
+
+                        <div className={ `${styles["bottom"]} ${styles[fifth ? "" : "bottom_active"]}`}>
+                            <div className={styles.left}>
+                                <div className={styles.currency}>$</div>
+                                <div className={styles.amount}>620</div>
+                            </div>
+                            <div className={styles.icons}>
+                                <div className={styles.share}>
+                                    <Image src="/images/share.png" width={20} height={20} />
+                                </div>
+                                <div className={styles.cart}>
+                                    <Image src="/images/cartw.png" width={20} height={20} />
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <div className={ `${styles["card"]} ${styles[sixth ? "" : "card_active"]}`} onMouseEnter={sixthEnter} onMouseLeave={sixthLeave}>
@@ -128,9 +203,24 @@ const sixthLeave = () => {
                             <Image src="/images/pic6.jpg" alt="painting image" width={232} height={264}  />
                         </div>
                         <div className={styles.content}>
-                        <div className={styles.title}>Into the Walls</div>
-                        <div className={styles.owner}>Ria Arante</div>
-                        <div className={styles.type}><i>Acrylic on wood, 2014</i></div>
+                            <div className={styles.title}>Into the Walls</div>
+                            <div className={styles.owner}>Ria Arante</div>
+                            <div className={styles.type}><i>Acrylic on wood, 2014</i></div>
+                        </div>
+
+                        <div className={ `${styles["bottom"]} ${styles[sixth ? "" : "bottom_active"]}`}>
+                            <div className={styles.left}>
+                                <div className={styles.currency}>$</div>
+                                <div className={styles.amount}>620</div>
+                            </div>
+                            <div className={styles.icons}>
+                                <div className={styles.share}>
+                                    <Image src="/images/share.png" width={20} height={20} />
+                                </div>
+                                <div className={styles.cart}>
+                                    <Image src="/images/cartw.png" width={20} height={20} />
+                                </div>
+                            </div>
                         </div>
                     </div>
 
