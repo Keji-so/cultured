@@ -1,9 +1,16 @@
-import {useState} from 'react';
+import {useState, useRef} from 'react';
 import styles from '../styles/Home.module.scss'
 import Image from 'next/image';
 
 
+
+
+
 function Slide() {
+    const ref = useRef(null);
+    const scroll = (scrollOffset) => {
+        ref.current.scrollLeft += scrollOffset;
+      };
 
 const [first, setFirst] = useState(true);
 
@@ -63,11 +70,19 @@ const sixthLeave = () => {
         }    
 
     return (
+        <>
+      
+      <div className={styles.featured}>
+        <div className={styles.featured_text}>Featured Products</div>
+        <div onClick={() => scroll(800)}>
+          <Image className={styles.icon} src="/images/arrow.png" alt="arrow right" width={40} height={20}  />
+        </div>
+      </div>
+
         <div className={styles.slide}>
             <div className={styles.image_slide}>
 
-                <div className={styles.card_cont}>
-
+                <div className={styles.card_cont}  ref={ref}>
                     <div className={ `${styles["card"]} ${styles["card_one"]} ${styles[first ? "" : "card_active"]}`} onMouseEnter={firstEnter} onMouseLeave={firstLeave}>
                         <div className={ `${styles["image"]} ${styles[first ? "" : "image_actives"]}`}>
                             <Image src="/images/pic1.png" alt="painting image" width={232} height={216}  />
@@ -230,6 +245,7 @@ const sixthLeave = () => {
 
             </div>
         </div>
+        </>
     )
 }
 
